@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Placeholder from "../components/Placeholder.astro";
+---
+
+<BaseLayout title="About — Xiaoyue Gao">
+  <PageIntro eyebrow="About" title="Training across computational and experimental biology" introduction="My academic path spans biological science, bioinformatics, single-cell genomics, and experimental cancer biology." />
+  <section class="content-grid shell">
+    <p class="side-label">Education</p>
+    <div class="stack">
+      <article class="record"><div class="record-head"><div><h2>University of Wisconsin–Madison</h2><p>Ph.D. Candidate in Pathology</p></div><p class="meta">2022–Present</p></div></article>
+      <article class="record"><div class="record-head"><div><h2>Beijing Institute of Genomics, Chinese Academy of Sciences</h2><p>M.S. in Bioinformatics · Affiliated with the China National Center for Bioinformation</p></div><p class="meta">2019–2022</p></div></article>
+      <article class="record"><div class="record-head"><div><h2>University of Chinese Academy of Sciences</h2><p>B.S. in Biological Science</p></div><p class="meta">2015–2019</p></div></article>
+      <article class="record"><div class="record-head"><div><h2>Australian National University</h2><p>International Exchange</p></div><p class="meta">2018</p></div></article>
+      <Placeholder title="Personal biography" text="A concise first-person biography and longer research narrative will be added after review." />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/PageIntro.astro";
+import Placeholder from "../components/Placeholder.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title="Contact — Xiaoyue Gao">
+  <PageIntro eyebrow="Contact" title="Connect about science and collaboration" introduction="For research-related communication, please use the institutional email address below." />
+  <section class="content-grid shell">
+    <p class="side-label">Contact details</p>
+    <div class="stack">
+      <article class="record"><h2>Email</h2><p><a href={`mailto:${site.email}`}>{site.email}</a></p><p>{site.affiliation} · {site.location}</p></article>
+      <Placeholder title="Academic and professional profiles" text="GitHub, Google Scholar, ORCID, and LinkedIn links will be added after the preferred accounts are confirmed." />
+    </div>
+  </section>
+</BaseLayout>
