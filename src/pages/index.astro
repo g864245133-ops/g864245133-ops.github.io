@@ -16,12 +16,23 @@ import { site } from "../data/site";
         <a class="text-link" href="/contact">Contact me</a>
       </div>
     </div>
-    <aside class="identity-panel" aria-label="Current position">
-      <p><strong>{site.title}</strong></p>
-      <p>{site.affiliation}</p>
-      <p class="muted">B-cell lymphoma · Cancer genomics</p>
-      <p class="muted">{site.location}</p>
-    </aside>
+    <div class="hero-profile">
+      <figure class="hero-portrait">
+        <img
+          src="/images/personal/Xiaoyue-Gao.jpg"
+          alt="Portrait of Xiaoyue Gao"
+          width="377"
+          height="480"
+        />
+      </figure>
+
+      <aside class="identity-panel" aria-label="Current position">
+        <p><strong>{site.title}</strong></p>
+        <p>{site.affiliation}</p>
+        <p class="muted">B-cell lymphoma · Cancer genomics</p>
+        <p class="muted">{site.location}</p>
+      </aside>
+    </div>
   </section>
 
   <section class="section">

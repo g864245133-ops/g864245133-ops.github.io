@@ -38,11 +38,33 @@ li + li { margin-top: .45rem; }
 .nav-list a { color: var(--muted); font-size: .9rem; text-decoration: none; }
 .nav-list a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
 
-.hero { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(15rem, .7fr); gap: clamp(3rem, 8vw, 8rem); align-items: end; padding-block: clamp(5rem, 12vw, 9rem); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(15rem, .7fr); gap: clamp(3rem, 8vw, 8rem); align-items: stretch; padding-block: clamp(5rem, 12vw, 9rem); }
 .eyebrow { margin-bottom: 1rem; color: var(--accent); font-size: .78rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
 .hero .lede, .page-intro .lede { max-width: 44rem; margin-top: 1.8rem; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.3rem); }
 .hero-summary { max-width: 44rem; color: var(--muted); }
-.identity-panel { padding: 1.5rem 0 0 1.5rem; border-left: 2px solid var(--accent); }
+.hero-profile {
+  position: relative;
+  width: 100%;
+  max-width: 22rem;
+  min-height: 100%;
+  justify-self: end;
+}
+
+.hero-portrait {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(100%, 9rem);
+  margin: 0;
+}
+
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.35rem;
+}
+.identity-panel { position: absolute; right: 0; bottom: 0; left: 0; padding: 1.5rem 0 0 1.5rem; border-left: 2px solid var(--accent); }
 .identity-panel p { margin-bottom: .5rem; }
 .identity-panel .muted { color: var(--muted); }
 .section { padding-block: clamp(3.5rem, 8vw, 6rem); border-top: 1px solid var(--line); }
@@ -187,6 +209,8 @@ li + li { margin-top: .45rem; }
   .nav-list { justify-content: flex-start; }
   .hero, .section-heading, .content-grid { grid-template-columns: 1fr; }
   .hero { align-items: start; }
+  .hero-profile { display: grid; gap: 1.5rem; min-height: 0; justify-self: start; }
+  .hero-portrait, .identity-panel { position: static; }
   .card-grid, .metric-grid { grid-template-columns: 1fr; }
   .split-grid { grid-template-columns: 1fr; }
 }
