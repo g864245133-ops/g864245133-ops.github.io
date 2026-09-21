@@ -4,13 +4,98 @@ import PageIntro from "../components/PageIntro.astro";
 ---
 
 <BaseLayout title="Research — Xiaoyue Gao">
-  <PageIntro eyebrow="Research" title="Mechanisms of cancer and therapeutic resistance" introduction="My current research combines molecular and cellular experiments with multi-omics analysis to study B-cell lymphoma." />
-  <section class="content-grid shell">
-    <p class="side-label">Selected experience</p>
-    <div class="stack">
-      <article class="record"><div class="record-head"><div><h2>B-cell lymphoma epigenetics</h2><p>Doctoral research · University of Wisconsin–Madison</p></div><p class="meta">2022–Present</p></div><p>Investigating DNA methylation in mantle cell lymphoma pathogenesis and epigenetic mechanisms of therapeutic resistance, including RNA-seq, ChIP-seq, and in vivo validation.</p></article>
-      <article class="record"><div class="record-head"><div><h2>Regulatory science collaboration</h2><p>U.S. Food and Drug Administration and UW–Madison</p></div><p class="meta">2023–2025</p></div><p>Led biostatistical analysis of regulatory submission profiles for botanical drug development in cancer management.</p></article>
-      <article class="record"><div class="record-head"><div><h2>Single-cell chromatin accessibility</h2><p>Beijing Institute of Genomics, Chinese Academy of Sciences</p></div><p class="meta">2019–2022</p></div><p>Analyzed scATAC-seq data to reconstruct regulatory networks, characterize tumor immune microenvironments, and study medulloblastoma subgroups.</p></article>
+  <PageIntro eyebrow="Research" title="From genomic evidence to testable biology" introduction="My research sits at the intersection of cancer genomics, epigenetics, and experimental biology. I am particularly interested in projects that require reinterpreting data, reframing the question, or connecting multiple forms of evidence." />
+
+  <section class="content-grid shell" id="medulloblastoma">
+    <div>
+  <p class="side-label">Featured research 01</p>
+
+  <figure class="research-figure">
+    <a
+      href="/images/research/medulloblastoma-NTR-regulatory-network.jpg"
+      aria-label="Open the medulloblastoma regulatory network figure"
+    >
+      <img
+        src="/images/research/medulloblastoma-NTR-regulatory-network.jpg"
+        alt="Network diagram showing subgroup-specific transcription factor and neurotransmitter receptor regulatory circuits in medulloblastoma"
+        loading="lazy"
+      />
+    </a>
+
+    <figcaption>
+      Subgroup-specific TF–NTR regulatory circuits in medulloblastoma.
+      Adapted from our published study. Select the figure to view it at full size.
+    </figcaption>
+  </figure>
+</div>
+    <article class="prose">
+      <p class="meta">Single-cell genomics · Medulloblastoma</p>
+      <h2>Subgroup-specific regulatory circuits in medulloblastoma</h2>
+      <p class="lede-small">Advanced Science, 2024 · Co-first author, listed first</p>
+      <h3>The question and constraint</h3>
+      <p>The project initially aimed to connect medulloblastoma subgroups with stages or cell populations in normal brain development. That question required suitable normal human developmental reference data, which were difficult to obtain, and known developmental markers did not reveal a sufficiently clear pattern in the available samples.</p>
+      <h3>How the question changed</h3>
+      <p>Before asking where each tumor originated, the samples first needed reliable molecular subgroup assignments. I reviewed published subgroup markers, classified the samples using chromatin-derived gene activity, and then examined subgroup-specific accessibility and regulatory programs.</p>
+      <h3>My contribution</h3>
+      <p>I performed the primary scATAC-seq computational analyses, including quality assessment, dimensionality reduction, clustering, annotation, differential accessibility, motif analysis, and regulatory network construction. When no single workflow directly produced the needed network, I reviewed published methods and integrated multiple outputs into a regulon-like analysis. I also contributed to manuscript writing and computational responses during peer review.</p>
+      <p>I separately explored public scRNA-seq datasets in Seurat for independent transcriptional evidence. The available data did not provide sufficiently suitable support, so these analyses were not used to extend the final conclusions.</p>
+      <h3>Collaborative contributions and outcome</h3>
+      <p>Clinical collaborators provided samples and clinical interpretation, and contributed supporting bulk data, experimental validation, and the extension toward neurotransmitter receptor biology. The study analyzed chromatin accessibility across 59,015 cells and identified subgroup-specific regulatory elements and TF–NTR circuits.</p>
+      <div class="link-row"><a class="button-link" href="https://doi.org/10.1002/advs.202309554">Read publication</a><a class="text-link" href="https://pubmed.ncbi.nlm.nih.gov/38884167/">View on PubMed</a></div>
+    </article>
+  </section>
+
+  <section class="content-grid shell" id="dnmt3b">
+    <div>
+  <p class="side-label">Featured research 02</p>
+
+  <figure class="research-figure">
+    <a
+      href="/images/research/poster-exhibition.JPG"
+      aria-label="Open the ASH poster presentation photo"
+    >
+      <img
+        src="/images/research/poster-exhibition.JPG"
+        alt="Xiaoyue Gao presenting her DNMT3B research poster at the 2025 ASH Annual Meeting"
+        loading="lazy"
+      />
+    </a>
+
+    <figcaption>
+      Presenting my doctoral research on DNMT3B in B-cell lymphoma at the
+      2025 ASH Annual Meeting.
+    </figcaption>
+  </figure>
+</div>
+    <article class="prose">
+      <p class="meta">Cancer epigenetics · B-cell lymphoma</p>
+      <h2>Investigating the tumor-suppressive role of DNMT3B</h2>
+      <p class="lede-small">Ongoing doctoral research</p>
+      <h3>Starting point</h3>
+      <p>The project began with knockout cell lines and sequencing datasets generated by a previous doctoral researcher. During my first year, I followed an existing hypothesis based primarily on ChIP-seq results, but progress along that direction was limited.</p>
+      <h3>Turning point and contribution</h3>
+      <p>I returned to the sequencing data and reconsidered the RNA-seq results alongside the ChIP-seq analysis. This suggested an alternative interpretation and led me to propose a new direction. I performed the computational reanalysis, selected an initial functional assay, and carried out the primary validation work. After the initial result supported the hypothesis, the project expanded to additional lymphoma cell lines and collaborative mouse studies.</p>
+      <h3>Collaboration and current challenge</h3>
+      <p>My advisor and a senior lab member recommended validation in multiple cell lines. The senior researcher also provided substantial help with mouse-study design and hands-on training. The project has established a reproducible phenotype, while the intermediate mechanism remains unresolved.</p>
+      <p class="note">Only findings disclosed in public abstracts and conference materials are presented here.</p>
+      <h3>Recognition</h3>
+      <ul class="compact-list"><li>2025 ASH Graduate Hematology Award</li><li>2025 ASH Abstract Achievement Award</li><li>Poster presentation at the 67th ASH Annual Meeting</li><li>Poster presentation at the 2025 UW Carbone Research Retreat</li></ul>
+      <div class="link-row"><a class="button-link" href="https://ashpublications.org/blood/article/146/Supplement%201/5302/555796">Read abstract</a><a class="text-link" href="https://www.hematology.org/awards/award-recipients/ash-graduate-hematology-award-recipients">View ASH award</a></div>
+    </article>
+  </section>
+
+  <section class="section" id="collaborations">
+    <div class="shell">
+      <div class="section-heading"><h2>Collaborative research contributions</h2><p>Focused computational and statistical work delivered as publication-ready figures, tables, and Methods text.</p></div>
+      <div class="card-grid">
+        <article class="card"><p class="card-number">Blood · 2023</p><h3>EGR1 and ibrutinib resistance</h3><p>Performed ATAC-seq peak calling, peak-to-gene association, and motif analysis near the EGR1 transcription start site.</p><p><strong>Deliverable:</strong> Supplemental Figure 3A</p><div class="link-row"><a class="text-link" href="https://doi.org/10.1182/blood.2023020142">Read publication</a></div></article>
+        <article class="card"><p class="card-number">Leukemia · 2026</p><h3>PRMT5 and ferroptosis</h3><p>Used rMATS to assess alternative splicing after PRMT5 loss. The analysis found no evidence of altered ATF4 or ATF5 splicing.</p><p><strong>Deliverables:</strong> Supplemental Figure 7A–C and Methods</p><div class="link-row"><a class="text-link" href="https://doi.org/10.1038/s41375-026-02932-3">Read publication</a></div></article>
+        <article class="card"><p class="card-number">TIRS · 2025</p><h3>Botanical IND regulatory profiles</h3><p>Performed statistical comparisons between oncologic and non-oncologic botanical INDs with collaborators from the U.S. FDA.</p><p><strong>Deliverables:</strong> Table 1 and Methods</p><div class="link-row"><a class="text-link" href="https://doi.org/10.1007/s43441-025-00786-y">Read publication</a></div></article>
+      </div>
     </div>
+  </section>
+
+  <section class="section">
+    <div class="shell section-heading"><h2>Methods</h2><div><ul class="tag-list"><li>R / Bioconductor</li><li>Linux</li><li>RNA-seq</li><li>ChIP-seq</li><li>ATAC-seq</li><li>scATAC-seq</li><li>scRNA-seq</li><li>WES</li><li>ONT</li><li>ArchR</li><li>Seurat</li><li>DESeq2</li><li>MACS2</li><li>rMATS</li></ul><div class="link-row"><a class="button-link" href="/publications">View publications</a><a class="text-link" href="/contact">Contact me</a></div></div></div>
   </section>
 </BaseLayout>

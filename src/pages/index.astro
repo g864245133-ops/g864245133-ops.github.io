@@ -3,21 +3,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { site } from "../data/site";
 ---
 
-<BaseLayout title={`${site.name} — Academic Portfolio`}>
+<BaseLayout title={`${site.name} — Cancer Genomics & Computational Biology`}>
   <section class="hero shell">
     <div>
-      <p class="eyebrow">Biomedical research · AI for Science</p>
+      <p class="eyebrow">Cancer Genomics · Computational Biology · Experimental Validation</p>
       <h1>{site.name}</h1>
-      <p class="lede">Ph.D. candidate investigating epigenetic mechanisms and therapeutic resistance in B-cell lymphoma, with a growing focus on computational approaches for scientific discovery.</p>
+      <p class="lede">I am a cancer researcher working across multi-omics analysis and experimental biology, with a growing focus on computational biology and AI for Science.</p>
+      <p class="hero-summary">I revisit complex genomic data, identify overlooked biological signals, and translate them into testable research directions.</p>
       <div class="link-row">
-        <a class="text-link" href="/research">View research</a>
-        <a class="text-link" href="/publications">Read publications</a>
+        <a class="button-link" href="/research">View my research</a>
+        <a class="button-link secondary" href="/publications">View publications</a>
+        <a class="text-link" href="/contact">Contact me</a>
       </div>
     </div>
     <aside class="identity-panel" aria-label="Current position">
       <p><strong>{site.title}</strong></p>
-      <p>{site.program}</p>
       <p>{site.affiliation}</p>
+      <p class="muted">B-cell lymphoma · Cancer genomics</p>
       <p class="muted">{site.location}</p>
     </aside>
   </section>
@@ -25,26 +27,94 @@ import { site } from "../data/site";
   <section class="section">
     <div class="shell">
       <div class="section-heading">
-        <h2>Research trajectory</h2>
-        <p>From single-cell chromatin accessibility and tumor regulatory networks to experimental studies of B-cell lymphoma biology.</p>
+        <h2>From complex data to testable biology</h2>
+        <p>My training spans bioinformatics, single-cell genomics, experimental cancer biology, and functional validation. I am particularly interested in questions that require revisiting existing data, integrating evidence from multiple sources, and deciding which biological explanations can be tested.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading">
+        <h2>Selected research</h2>
+        <p>Projects that reflect how I analyze data, reframe scientific questions, and connect computational findings with biological validation.</p>
       </div>
       <div class="card-grid">
         <article class="card">
-          <p class="card-number">01 · 2019–2022</p>
-          <h3>Single-cell genomics</h3>
-          <p>scATAC-seq analysis of medulloblastoma subgroups and gene regulatory networks.</p>
+          <p class="card-number">Single-cell genomics</p>
+          <h3>Medulloblastoma regulatory circuits</h3>
+          <p>Primary computational analyses for a scATAC-seq study of subgroup-specific chromatin accessibility and TF–NTR regulatory networks.</p>
+          <p><strong>Advanced Science, 2024</strong><br />Co-first author, listed first</p>
+          <ul class="tag-list" aria-label="Methods"><li>scATAC-seq</li><li>Regulatory networks</li><li>Motif analysis</li></ul>
+          <div class="link-row"><a class="text-link" href="/research#medulloblastoma">View case study</a></div>
         </article>
         <article class="card">
-          <p class="card-number">02 · Current</p>
-          <h3>B-cell lymphoma</h3>
-          <p>DNA methylation, epigenetic mechanisms, drug resistance, and experimental validation.</p>
+          <p class="card-number">Cancer epigenetics</p>
+          <h3>DNMT3B in B-cell lymphoma</h3>
+          <p>Reanalysis of RNA-seq and ChIP-seq data led to a new research direction, followed by functional validation across cell models and collaborative mouse studies.</p>
+          <p><strong>Ongoing doctoral research</strong><br />Public findings only</p>
+          <ul class="tag-list" aria-label="Methods"><li>RNA-seq</li><li>ChIP-seq</li><li>Functional validation</li></ul>
+          <div class="link-row"><a class="text-link" href="/research#dnmt3b">View research</a></div>
         </article>
         <article class="card">
-          <p class="card-number">03 · Developing</p>
-          <h3>AI for Science</h3>
-          <p>A portfolio of reproducible learning projects will document the transition into AI-enabled research.</p>
+          <p class="card-number">Collaborative research</p>
+          <h3>Genomic and statistical analysis</h3>
+          <p>Focused analytical contributions to studies in lymphoma biology and regulatory science, each resulting in a publication figure or table.</p>
+          <p><strong>Blood · Leukemia · TIRS</strong></p>
+          <ul class="tag-list" aria-label="Methods"><li>ATAC-seq</li><li>Alternative splicing</li><li>Statistics</li></ul>
+          <div class="link-row"><a class="text-link" href="/research#collaborations">View contributions</a></div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading">
+        <h2>Selected recognition</h2>
+        <p>External support and recognition for my doctoral research in hematology.</p>
+      </div>
+      <div class="metric-grid">
+        <div class="metric"><strong>2025</strong><span>ASH Graduate Hematology Award</span></div>
+        <div class="metric"><strong>1 of 12</strong><span>Recipients listed for 2025</span></div>
+        <div class="metric"><strong>$80,000</strong><span>Two-year research support</span></div>
+      </div>
+      <div class="link-row">
+        <a class="text-link" href="https://www.hematology.org/awards/award-recipients/ash-graduate-hematology-award-recipients">View recipient list</a>
+        <a class="text-link" href="https://www.hematology.org/awards/award-recipients/abstract-achievement/2025">2025 Abstract Achievement Award</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell split-grid">
+      <div>
+        <p class="eyebrow">Current direction</p>
+        <h2>Building toward computational biology</h2>
+        <p>My next step is to deepen my skills in Python, machine learning, and scientific software development. I hope to build computational approaches that help researchers interpret complex biological data, prioritize hypotheses, and reduce avoidable experimental work.</p>
+        <div class="link-row"><a class="text-link" href={site.profiles.github}>Visit GitHub</a><a class="text-link" href="/about">Read my path</a></div>
+      </div>
+      <div>
+        <p class="eyebrow">Science beyond the lab</p>
+        <h2>Communication, dance, and two cats</h2>
+        <p>I contribute to public science events through Science in Motion. Outside research, I dance, share small creative projects, and spend much of my time with two cats.</p>
+        <figure class="personal-photo">
+  <img
+    src="/images/personal/cats-home.JPG"
+    alt="Charlie(left) and Josephine(right) relaxing together at home"
+    loading="lazy"
+  />
+  <figcaption>My two cats, and an important part of life beyond the lab.</figcaption>
+</figure>
+        <div class="link-row"><a class="text-link" href="/science-communication">Science communication</a><a class="text-link" href="/about#beyond-the-lab">Beyond the lab</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell section-heading">
+      <h2>Let’s connect</h2>
+      <div><p>I welcome conversations about computational biology, cancer genomics, translational bioinformatics, industry roles, postdoctoral opportunities, and research collaborations.</p><a class="button-link" href="/contact">Contact me</a></div>
     </div>
   </section>
 </BaseLayout>
